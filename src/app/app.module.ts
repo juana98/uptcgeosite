@@ -7,20 +7,26 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { CustomNgxbootstrapModule } from './custom-ngxbootstrap/custom-ngxbootstrap.module';
+import { AdminComponent } from './pages/admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminModule } from 'src/app/modules/admin/admin.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CustomMaterialModule,
     SharedModule,
     BrowserAnimationsModule,
-    CustomNgxbootstrapModule
+    CustomNgxbootstrapModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

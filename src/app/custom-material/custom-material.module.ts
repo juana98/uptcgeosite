@@ -9,6 +9,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatTableModule} from '@angular/material/table';
 
 const materialModules = [
   MatSliderModule,
@@ -19,7 +20,8 @@ const materialModules = [
   MatSidenavModule,
   MatGridListModule,
   MatMenuModule,
-  LayoutModule
+  LayoutModule,
+  MatTableModule
 ]
 
 @NgModule({
