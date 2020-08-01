@@ -1,1 +1,7 @@
-<app-admin-list-cont></app-admin-list-cont>
+<div class="admin-list-container">
+    <app-admin-list-cont (postToEdit)="changeCurrentPost($event)"></app-admin-list-cont>
+    <button class="admin-button-position" (click)="showCreateForm = true" mat-raised-button color="primary">{{'admin-post-create' | translate}}</button>
+</div>
+<div *ngIf="showCreateForm">
+    <app-admin-post-detail-cont [postModelDetail]="currentPost"></app-admin-post-detail-cont>
+</div>

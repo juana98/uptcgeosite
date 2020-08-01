@@ -1,0 +1,20 @@
+
+<div class="adminlist-card-container">
+    <mat-card>
+        <form class="adminlist-form-container" [formGroup]="postDetailForm" (ngSubmit)="createPost(postDetailForm.value)">
+            <mat-form-field appearance="legacy">
+                <mat-label>{{'admin-post-detail-form-name' | translate }}</mat-label>
+                <input matInput formControlName="name"  placeholder="{{'admin-post-detail-form-name' | translate }}">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>{{'admin-post-detail-form-description' | translate }}</mat-label>
+                <input matInput formControlName="description"  placeholder="{{'admin-post-detail-form-description' | translate }}">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>{{'admin-post-detail-form-title' | translate }}</mat-label>
+                <input matInput formControlName="title"  placeholder="{{'admin-post-detail-form-title' | translate }}">
+            </mat-form-field>
+            <button class="adminlist-button-position" type="submit" mat-raised-button color="primary">{{'admin-post-save' | translate}}</button>
+        </form>
+    </mat-card>  
+</div>

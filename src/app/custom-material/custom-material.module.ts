@@ -10,6 +10,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 const materialModules = [
   MatSliderModule,
@@ -21,7 +24,9 @@ const materialModules = [
   MatGridListModule,
   MatMenuModule,
   LayoutModule,
-  MatTableModule
+  MatTableModule,
+  MatFormFieldModule,
+  MatInputModule
 ]
 
 @NgModule({

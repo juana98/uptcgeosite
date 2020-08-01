@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 import { Observable } from 'rxjs';
 import { PostModel} from 'src/app/models/post.model';
@@ -11,6 +11,8 @@ import { PostModel} from 'src/app/models/post.model';
 export class AdminListContComponent implements OnInit {
 
   public postEntry$: Observable<PostModel[]>
+  @Output() postToEdit = new EventEmitter<PostModel>();
+
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
@@ -19,6 +21,10 @@ export class AdminListContComponent implements OnInit {
 
   getPosts(){
     this.postEntry$ = this.postService.getPost();
+  }
+
+  sendPostToEdit(event: PostModel){
+    this.postToEdit.emit(event);
   }
 
 }

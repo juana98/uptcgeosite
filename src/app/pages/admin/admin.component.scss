@@ -1,5 +1,7 @@
-table{
-    display: contents;
-    width: 100%;
-
+.admin-list-container{
+  display: flex;
+  flex-direction: column;
+  .admin-button-position{
+    margin: auto;
   }
+}

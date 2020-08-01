@@ -1,0 +1,13 @@
+{
+    "admin-post-list-title": "Administración de Publicaciones",
+    "admin-post-list-table-name": "Nombre",
+    "admin-post-list-table-description": "Descripción",
+    "admin-post-list-table-actions": "Acciones",
+    "admin-post-list-no-results": "No hay Publicaciones disponibles",
+    "admin-post-detail-form-name": "Nombre",
+    "admin-post-detail-form-description": "Descripción",
+    "admin-post-detail-form-title": "Título",
+    "admin-post-create": "Agregar Publicación",
+    "admin-post-save": "Guardar"
+
+}

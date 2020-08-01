@@ -14,11 +14,16 @@ const options = {
   providedIn: 'root'
 })
 export class PostService {
-
+  
   constructor(private http : HttpClient) { }
-
+  
+  baseUrl = 'http://localhost:3000/posts';
 
   getPost():Observable<PostModel[]>{
-   return this.http.get<PostModel[]>('http://localhost:3000/posts',options);
+   return this.http.get<PostModel[]>(this.baseUrl,options);
+  }
+
+  savePost(post: PostModel):Observable<PostModel[]>{
+   return this.http.post<PostModel[]>(this.baseUrl,post, options);
   }
 }
