@@ -26,4 +26,8 @@ export class PostService {
   savePost(post: PostModel):Observable<PostModel[]>{
    return this.http.post<PostModel[]>(this.baseUrl,post, options);
   }
+
+  deletePost(post: PostModel):Observable<PostModel[]>{
+    return this.http.post<PostModel[]>(this.baseUrl,post.id, options);
+   }
 }

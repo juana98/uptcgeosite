@@ -14,6 +14,14 @@
                 <mat-label>{{'admin-post-detail-form-title' | translate }}</mat-label>
                 <input matInput formControlName="title"  placeholder="{{'admin-post-detail-form-title' | translate }}">
             </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'admin-post-detail-form-category' | translate }}</mat-label>
+                <mat-select formControlName="category">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
             <button class="adminlist-button-position" type="submit" mat-raised-button color="primary">{{'admin-post-save' | translate}}</button>
         </form>
     </mat-card>  

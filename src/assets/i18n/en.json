@@ -8,5 +8,6 @@
     "admin-post-detail-form-description": "Description",
     "admin-post-detail-form-title": "Title",
     "admin-post-create": "Add Post",
-    "admin-post-save": "Save"
+    "admin-post-save": "Save",
+    "admin-post-detail-form-category": "Category"
 }

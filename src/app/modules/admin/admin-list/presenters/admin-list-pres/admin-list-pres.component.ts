@@ -22,4 +22,8 @@ export class AdminListPresComponent implements OnInit {
     this.postToEdit.emit(post);
   }
   
+  removePost(post: PostModel){
+    this.postToEdit.emit(post);
+  }
+  
 }

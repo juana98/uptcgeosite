@@ -8,6 +8,7 @@
     "admin-post-detail-form-description": "Descripción",
     "admin-post-detail-form-title": "Título",
     "admin-post-create": "Agregar Publicación",
-    "admin-post-save": "Guardar"
+    "admin-post-save": "Guardar",
+    "admin-post-detail-form-category": "Categoria"
 
 }

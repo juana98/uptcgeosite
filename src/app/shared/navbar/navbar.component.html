@@ -11,4 +11,15 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>Español</span>
+      </button>
+      <button mat-menu-item>
+        <span>English</span>
+      </button>
+    </mat-menu>
   </mat-toolbar>

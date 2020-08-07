@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PostModel } from '../../../../../models/post.model';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { PostService } from '../../../../../services/post.service';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss'
 
 @Component({
