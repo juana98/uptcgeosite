@@ -1,7 +1,7 @@
 
 <div class="adminlist-card-container">
     <mat-card>
-        <form class="adminlist-form-container" [formGroup]="postDetailForm" (ngSubmit)="createPost(postDetailForm.value)">
+        <form class="adminlist-form-container" [formGroup]="postDetailForm" (ngSubmit)="savePost(postDetailForm.value)">
             <mat-form-field appearance="legacy">
                 <mat-label>{{'admin-post-detail-form-name' | translate }}</mat-label>
                 <input matInput formControlName="name"  placeholder="{{'admin-post-detail-form-name' | translate }}">

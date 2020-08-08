@@ -1,5 +1,5 @@
 <div class="admin-post-title">
-  <h2>{{ 'admin-post-list-title' | translate }}</h2>
+  <h1>{{ 'admin-post-list-title' | translate }}</h1>
 </div>
 <div class="admin-post-list-container" *ngIf="(posts && posts.length > 0) else nopost">
   <mat-table [dataSource]="posts" class="mat-elevation-z8">

@@ -7,7 +7,7 @@ import { PostModel } from '../../models/post.model';
 })
 export class AdminComponent implements OnInit {
   currentPost: PostModel;
-  showCreateForm: boolean = false;
+  isCreateMode: boolean = false;
   constructor() { }
   
   ngOnInit(): void {
@@ -15,6 +15,12 @@ export class AdminComponent implements OnInit {
 
   public changeCurrentPost(event: PostModel){
     this.currentPost = event;
+    this.isCreateMode = false;
+  }
+
+  public closeDetail(){
+    this.isCreateMode = false;
+    this.currentPost = null;
   }
  
 }

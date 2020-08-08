@@ -24,6 +24,14 @@ export class PostService {
   }
 
   savePost(post: PostModel):Observable<PostModel[]>{
+    return post.id ? this.editPost(post) : this.createPost(post);
+  }
+
+  editPost(post:PostModel):Observable<PostModel[]>{
+    return this.http.put<PostModel[]>(`${this.baseUrl}/${post.id}`,post, options);
+  }
+
+  createPost(post: PostModel):Observable<PostModel[]>{
    return this.http.post<PostModel[]>(this.baseUrl,post, options);
   }
 
