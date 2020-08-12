@@ -10,6 +10,7 @@ export class AdminListPresComponent implements OnInit {
 
   @Input() public posts:PostModel[];
   @Output() postToEdit = new EventEmitter<PostModel>();
+  @Output() postToDelete = new EventEmitter<String>();
 
   constructor() { }
 
@@ -23,7 +24,7 @@ export class AdminListPresComponent implements OnInit {
   }
   
   removePost(post: PostModel){
-    this.postToEdit.emit(post);
+    this.postToDelete.emit(post.id);
   }
   
 }

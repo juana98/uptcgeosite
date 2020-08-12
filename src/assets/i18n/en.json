@@ -9,5 +9,6 @@
     "admin-post-detail-form-title": "Title",
     "admin-post-create": "Add Post",
     "admin-post-save": "Save",
-    "admin-post-detail-form-category": "Category"
+    "admin-post-detail-form-category": "Category",
+    "admin-post-detail-title": "Fields"
 }

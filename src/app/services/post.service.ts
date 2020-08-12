@@ -36,6 +36,6 @@ export class PostService {
   }
 
   deletePost(post: PostModel):Observable<PostModel[]>{
-    return this.http.post<PostModel[]>(this.baseUrl,post.id, options);
+    return this.http.delete<PostModel[]>(`${this.baseUrl}/${post}`, options);
    }
 }

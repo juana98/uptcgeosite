@@ -1,5 +1,7 @@
-
 <div class="adminlist-card-container">
+    <div class="admin-post-title">
+        <h1>{{ 'admin-post-detail-title' | translate }}</h1>
+    </div>
     <mat-card>
         <form class="adminlist-form-container" [formGroup]="postDetailForm" (ngSubmit)="savePost(postDetailForm.value)">
             <mat-form-field appearance="legacy">

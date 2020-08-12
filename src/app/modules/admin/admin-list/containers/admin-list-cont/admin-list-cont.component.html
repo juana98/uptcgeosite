@@ -1,1 +1,1 @@
-<app-admin-list-pres [posts] = "postEntry$ |async" (postToEdit)="sendPostToEdit($event)"></app-admin-list-pres>
+<app-admin-list-pres [posts] = "postEntry$ |async" (postToEdit)="sendPostToEdit($event)" (postToDelete)="deletePost($event)" ></app-admin-list-pres>
