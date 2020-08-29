@@ -4,27 +4,23 @@ import { PostModel } from 'src/app/models/post.model';
 @Component({
   selector: 'app-admin-list-pres',
   templateUrl: './admin-list-pres.component.html',
-  styleUrls: ['./admin-list-pres.component.scss']
+  styleUrls: ['./admin-list-pres.component.scss'],
 })
 export class AdminListPresComponent implements OnInit {
-
-  @Input() public posts:PostModel[];
+  @Input() public posts: PostModel[];
   @Output() postToEdit = new EventEmitter<PostModel>();
-  @Output() postToDelete = new EventEmitter<String>();
+  @Output() postToDelete = new EventEmitter<string>();
+  displayedColumns: string[] = ['name', 'description', 'edit'];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  displayedColumns:string[]=['name','description','edit']
-
-  setEdit(post: PostModel){
+  setEdit(post: PostModel): void {
     this.postToEdit.emit(post);
   }
-  
-  removePost(post: PostModel){
+
+  removePost(post: PostModel): void {
     this.postToDelete.emit(post.id);
   }
-  
 }

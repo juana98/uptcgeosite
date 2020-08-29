@@ -5,16 +5,14 @@ import { MatDrawer } from '@angular/material/sidenav/drawer';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
   @ViewChild('drawer') public drawer: MatDrawer;
 
-  constructor(private drawerService: DrawerService){}
+  constructor(private drawerService: DrawerService) {}
 
-  
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.drawerService.setDrawer(this.drawer);
   }
-  
 }

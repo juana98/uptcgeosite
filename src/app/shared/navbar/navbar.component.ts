@@ -4,18 +4,14 @@ import { DrawerService } from '../services/drawer.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  
-  constructor(private drawerService: DrawerService) { }
+  constructor(private drawerService: DrawerService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  toggleDrawer() {
+  toggleDrawer(): void {
     this.drawerService.toggle();
-}
-  
-
+  }
 }

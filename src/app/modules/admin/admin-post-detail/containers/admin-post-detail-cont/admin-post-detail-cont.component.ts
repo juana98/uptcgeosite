@@ -7,15 +7,14 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-admin-post-detail-cont',
   templateUrl: './admin-post-detail-cont.component.html',
-  styleUrls: ['./admin-post-detail-cont.component.scss']
+  styleUrls: ['./admin-post-detail-cont.component.scss'],
 })
 export class AdminPostDetailContComponent implements OnInit {
-
   postDetailForm: FormGroup;
-  
+
   @Input() postModelDetail: PostModel;
   @Output() currentPost = new EventEmitter<PostModel>();
-  @Output() close = new EventEmitter<boolean>();
+  @Output() closeAction = new EventEmitter<boolean>();
 
   constructor(private fb: FormBuilder, private postService: PostService) {
     this.postDetailForm = this.fb.group({
@@ -23,27 +22,22 @@ export class AdminPostDetailContComponent implements OnInit {
       description: ['', Validators.required],
       title: ['', Validators.required],
       category: [''],
-      activatePost: ['']
+      activatePost: [''],
     });
-   }
-
-  ngOnInit(): void {
   }
 
-  savePost(post: PostModel){
+  ngOnInit(): void {}
+
+  savePost(post: PostModel): void {
     this.postService.savePost(post).subscribe((data) => {
-      this.close.emit(true);
+      this.closeAction.emit(true);
       Swal.fire({
         position: 'center',
         icon: 'success',
         title: 'Your work has been saved',
         showConfirmButton: false,
-        timer: 3000
-        
-      })
-    })
+        timer: 3000,
+      });
+    });
   }
-
-  
-
 }

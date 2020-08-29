@@ -9,16 +9,17 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
-    AdminListContComponent, 
-    AdminListPresComponent, 
-    AdminPostDetailContComponent, 
+    AdminListContComponent,
+    AdminListPresComponent,
+    AdminPostDetailContComponent,
     AdminPostDetailPresComponent,
   ],
-  imports: [
-    CommonModule,
-    SweetAlert2Module.forRoot(),
-    SharedModule
+  imports: [CommonModule, SweetAlert2Module.forRoot(), SharedModule],
+  exports: [
+    AdminListContComponent,
+    AdminListPresComponent,
+    AdminPostDetailContComponent,
+    AdminPostDetailPresComponent,
   ],
-  exports: [AdminListContComponent, AdminListPresComponent, AdminPostDetailContComponent, AdminPostDetailPresComponent]
 })
-export class AdminModule { }
+export class AdminModule {}

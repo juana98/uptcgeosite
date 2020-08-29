@@ -10,29 +10,25 @@ import { CustomNgxbootstrapModule } from './custom-ngxbootstrap/custom-ngxbootst
 import { AdminComponent } from './pages/admin/admin.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AdminModule } from 'src/app/modules/admin/admin.module';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AdminComponent
-  ],
+  declarations: [AppComponent, HomeComponent, AdminComponent],
   imports: [
     BrowserModule,
     TranslateModule.forRoot({
       defaultLanguage: 'es',
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
     }),
     AppRoutingModule,
     HttpClientModule,
@@ -41,9 +37,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SharedModule,
     BrowserAnimationsModule,
     CustomNgxbootstrapModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
